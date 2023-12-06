@@ -16,7 +16,7 @@ func main() {
 	sheet := xlsxFile.GetSheetList()
 	fmt.Println("sheet name ", sheet)
 	// Set the row number for the row to be formatted (10th row in this case)
-	rowNumbers := []int{5, 8, 10}
+	rowNumbers := []int{5, 10}
 	columns, err := xlsxFile.GetCols("Sheet1")
 	if err != nil {
 		log.Fatalf("Error getting column count: %v", err)
@@ -30,7 +30,9 @@ func main() {
 
 	// Apply the style to each cell in the 10th row
 	for _, rowNumber := range rowNumbers {
+
 		for col := 1; col <= totalCols; col++ {
+			fmt.Println("data:", rowNumber)
 			cellName, err := excelize.CoordinatesToCellName(col, rowNumber)
 			if err != nil {
 				log.Fatalf("Error converting coordinates to cell name: %v", err)
